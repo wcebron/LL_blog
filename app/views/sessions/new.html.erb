@@ -1,0 +1,13 @@
+<h1> Log in to your account </h1>
+
+<%= form_for @user, :url => { :controller => "sessions", :action => "create" } do |f| %>
+   Email: <%= f.text_field :email %><br />
+    Password: <%= f.password_field :password %><br />
+    <%= f.submit "Log-in" %>
+<% end %>
+
+<hl />
+
+<br />
+<hr />
+<%= params.inspect %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150210022819) do
+ActiveRecord::Schema.define(version: 20150211180354) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
@@ -26,12 +26,12 @@ ActiveRecord::Schema.define(version: 20150210022819) do
   add_index "posts", ["user_id"], name: "index_posts_on_user_id"
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
     t.string   "email"
+    t.text     "bio"
     t.boolean  "is_admin"
-    t.string   "hashed_password"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "password_digest"
   end
 
 end
