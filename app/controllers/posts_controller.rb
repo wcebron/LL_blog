@@ -12,7 +12,11 @@ class PostsController < ApplicationController
   end
 
   def edit
-   @post = Post.find(params[:id])
+    if current_user != nil && current_user.is_admin == true
+      @post = Post.find(params[:id])
+    else
+      redirect_to posts_path
+    end
   end
 
   def create
