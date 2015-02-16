@@ -1,6 +1,10 @@
 class SessionsController < ApplicationController
   def new
-  	@user = User.new
+    if session['user_id']==nil
+      @user = User.new
+    else
+      redirect_to posts_path
+    end
   end
 
   def create
@@ -13,6 +17,6 @@ class SessionsController < ApplicationController
 
   def destroy
   	session.destroy
-    redirect_to new_sessions_path
+    redirect_to new_session_path
   end
 end
