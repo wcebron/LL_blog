@@ -2,3 +2,39 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import url(http://fonts.googleapis.com/css?family=Kreon:300,400);
+$mainfont:'Kreon', serif;
+
+.numberCircle {
+    border-radius: 50%;
+
+    height: 50px;
+  	width: 50px;
+  	display: table-cell;
+  	text-align: center;
+  	vertical-align: middle;
+ 		border-radius: 50%; /* may require vendor prefixes */
+    font: 24px $mainfont, sans-serif;
+    color: #FFF;
+}
+
+.numberCircle1 {
+	@extend .numberCircle;
+	background: #631576;
+}
+
+.numberCircle2 {
+	@extend .numberCircle;
+	background: #241DC7;
+}
+
+.numberCircle3 {
+	@extend .numberCircle;
+	background: #00AD74;
+}
+
+.numberCircle4 {
+	@extend .numberCircle;
+	background: #C9509F;
+}
+

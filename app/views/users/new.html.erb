@@ -2,6 +2,7 @@
 
 <%= form_for @user do |f| %>
 	<%= f.text_field :email, placeholder: "Email" %> <br />
+	<%= f.text_field :bio, placeholder: "Short Bio" %> <br />
 	<%= f.password_field :password, placeholder: "Password" %> <br />
 	<%= f.password_field :password_confirmation, placeholder: "Confirm Password" %> <br />
 	<%= f.file_field :avatar %><br />

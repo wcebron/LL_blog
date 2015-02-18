@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   #post'sessions' => 'sessions#create', as: :sessions
   #delete 'sessions/:id' => 'sessions#destroy'
 
-  resources :users, only: [:index, :new, :create]
+  resources :users, only: [:index, :new, :create, :show]
 
   resources :posts do
     resources :photos
