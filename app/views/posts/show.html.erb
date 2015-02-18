@@ -15,11 +15,9 @@
   <%= @post.content %>
 </p>
 
+<%= image_tag @user.avatar.url %>
+<%= image_tag @user.avatar.url(:medium) %>
+<%= image_tag @user.avatar.url(:thumb) %>
+
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Home', posts_path %>
-
-<br />
-<hr />
-<%= params.inspect %>
-
-<hr />

@@ -21,8 +21,9 @@ class PostsController < ApplicationController
 
   def create
     post = Post.new(order_params)
-      # respond_to do |format|
-      if @post.save
+    post.user_id = current_user.id
+      #respond_to do |format|
+      if post.save
         redirect_to posts_path
       else
         render 'new'
