@@ -6,6 +6,8 @@
 		<%= link_to 'Log In',new_session_path %>
 		</div>
 		<div class ="log_in">
-		Signed in as: <%#= current_user.email %>
+		<% if current_user != nil %>
+		Signed in as: <%= current_user.email %>
+		<% end %>
 		</div>
  </div>
