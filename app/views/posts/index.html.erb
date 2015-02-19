@@ -19,7 +19,13 @@
           </div>
         </div>
         <div class="right_trending">
-          <div class="category">Lessons</div>
+          <div class="category">
+          <% @posts.each do |post|%>
+          <hr>
+            <%= post.category %>
+          <hr>
+          <% end %>
+          </div>
           <div class="title">How to find the right music teacher</div>
         </div>
       </div>

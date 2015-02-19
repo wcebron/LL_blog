@@ -3,11 +3,14 @@
     	<%= link_to 'Log Out',session_path(:id), method: :delete %>
     </div>
     <div class ="nav_links">
-		<%= link_to 'Log In',new_session_path %>
+			<%= link_to 'Log In',new_session_path %>
 		</div>
 		<div class ="log_in">
-		<% if current_user != nil %>
-		Signed in as: <%= current_user.email %>
-		<% end %>
+			<% if current_user != nil %>
+			Signed in as: <%= current_user.email %>
+			<% end %>
+		</div>
+		<div class ="nav_links">
+			<%= link_to 'Post',new_post_path %>
 		</div>
  </div>

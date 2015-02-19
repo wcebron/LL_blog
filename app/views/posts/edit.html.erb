@@ -1,12 +1,18 @@
-<div class = "edit_container">
-	<h1>Edit Posts</h1>
-
-	<%= render 'form' %>
-
-	<%= link_to 'Back', post_path %>
-	<%= link_to 'Home', posts_path %>
-
+<div class = "container">
+  <%= render 'layouts/navbar' %>
 </div>
-<br />
-<hr />
- <%= params.inspect %>
+
+<div class="container">
+	<div class = "edit_container">
+		<h1>Edit Posts</h1>
+
+		<%= render 'form' %>
+
+		<%= link_to 'Back', post_path %>
+		<%= link_to 'Home', posts_path %>
+
+	</div>
+	<br />
+	<hr />
+ 	<%= params.inspect %>
+</div>

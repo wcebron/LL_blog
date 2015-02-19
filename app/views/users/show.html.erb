@@ -1,7 +1,13 @@
-<%= @user.email %><br />
-<%= @user.bio %><br />
-<%= image_tag @user.avatar.url(:medium) %><br />
-<%= image_tag @user.avatar.url(:thumb) %><br />
-<br />
+<div class = "container">
+  <%= render 'layouts/navbar' %>
+</div>
 
-<%= link_to 'Return to new user', new_user_path %>
+<div class = "container">
+	<%= @user.email %><br />
+	<%= @user.bio %><br />
+	<%= image_tag @user.avatar.url(:medium) %><br />
+	<%= image_tag @user.avatar.url(:thumb) %><br />
+	<br />
+
+	<%= link_to 'Return to new user', new_user_path %>
+</div>

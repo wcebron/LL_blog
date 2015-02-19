@@ -101,6 +101,9 @@ $mainfont:'Kreon', serif;
 		height: auto;
 		background-attachment: fixed;
 	}
+	#t1 {
+		margin: 3% 0;
+	}
 }
 
 
@@ -146,5 +149,28 @@ $mainfont:'Kreon', serif;
 .author{
 	font-size: 10px;
 	padding: 5% 0 0 0;
+}
+
+.show_category{
+	width: 10%;
+	font-size: 12px;
+	margin: 2% auto;
+	text-align: center;
+	border: 1px solid #F3F4F8;
+	border-radius: 3%;
+}
+
+.show_title{
+	width: 90%;
+	font-size: 24px;
+	margin: 2% auto;
+	text-align: center;
+}
+
+.show_content{
+	width: 60%;
+	font-size: 16px;
+	margin: 5% auto;
+	text-align: center;
 }
 
