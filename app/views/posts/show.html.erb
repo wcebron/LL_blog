@@ -10,7 +10,7 @@
     <%= @post.title %>
   </div>
   <div class="show_content">
-    <%= @post.content %>
+    <%= simple_format(@post.content) %>
   </div>
     <% @post.photos.each do |p| %>
     <%= image_tag p.image.url(:large) %>
@@ -24,5 +24,3 @@
 	<% end %>
 	<%= link_to 'Home', posts_path %>
 </div>
-
-
