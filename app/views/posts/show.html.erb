@@ -12,9 +12,11 @@
   <div class="show_content">
     <%= simple_format(@post.content) %>
   </div>
+  <div class="show_photo">
     <% @post.photos.each do |p| %>
     <%= image_tag p.image.url(:large) %>
     <% end %>
+  </div>
 </div>
 
 <div class="container">

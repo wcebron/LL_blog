@@ -175,11 +175,16 @@ $mainfont:'Kreon', serif;
 }
 
 .jssora02l, .jssora02r {
-position: absolute;
-cursor: pointer;
-display: block;
-background: url('../../assets/a20.png') no-repeat;
-overflow: hidden;
+	position: absolute;
+	cursor: pointer;
+	display: block;
+	background: url('../../assets/a20.png') no-repeat;
+	overflow: hidden;
 }
 
+.show_photo {
+	position: relative;
+	text-align:center;
+	margin: 0 auto;
+}
 

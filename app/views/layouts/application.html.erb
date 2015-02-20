@@ -5,15 +5,9 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script>
     jQuery(document).ready(function ($) {
-         var options = {
-            $ArrowNavigatorOptions: {  //add in arrow navigation for hero slider
-                $Class: $JssorArrowNavigator$,
-                $ChanceToShow: 2
-            }
-        };
-        var jssor_slider1 = new $JssorSlider$('slider1_container', options); //add in slider for hero
+        var options = { $AutoPlay: true, $AutoPlayInterval: 3000}; //turns on autoplay bu sets duration to 3000 at each new slide
+        var jssor_slider1 = new $JssorSlider$('slider1_container', options);
         //responsive code begin
-        //you can remove responsive code if you don't want the slider scales
         //while window resizes
         function ScaleSlider() {
             var parentWidth = $('#slider1_container').parent().width();
