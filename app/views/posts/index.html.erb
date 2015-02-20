@@ -6,62 +6,32 @@
   <div class="row clearfix">
 
     <div class="column two-thirds">
-      <div class="hero">
+    <div class="hero">   <!-- img src="post.photos.last.image(url)" -->
       </div>
     </div>
 
     <div class="column third">
       <div id="t1"> Popular Topics:
       </div>
+      <% @post1.each do |post|%>
       <div class="trending" id="t2">
         <div class="left_trending">
-          <div class="numberCircle1">1
+          <div class="numberCircle1">
           </div>
         </div>
         <div class="right_trending">
           <div class="category">
-          <% @posts.each do |post|%>
-          <hr>
-            <%= post.category %>
-          <hr>
-          <% end %>
+            <%= post.category %> <br />
           </div>
-          <div class="title">How to find the right music teacher</div>
-        </div>
-      </div>
-      <div class="trending" id="t3">
-        <div class="left_trending">
-          <div class="numberCircle2">2
+          <div class="title">
+            <%= post.title %>
           </div>
         </div>
-        <div class="right_trending">
-          <div class="category">Legends</div>
-          <div class="title">John Mayer talks about learning guitar</div>
-        </div>
       </div>
-      <div class="trending" id="t4">
-        <div class="left_trending">
-          <div class="numberCircle3">3
-          </div>
-        </div>
-        <div class="right_trending">
-          <div class="category">Instruments</div>
-          <div class="title">What is the right piano for beginners?</div>
-        </div>
-      </div>
-      <div class="trending" id="t5">
-        <div class="left_trending">
-           <div class="numberCircle4">4
-           </div>
-        </div>
-        <div class="right_trending">
-          <div class="category">MusicEd</div>
-          <div class="title">Studies reveal new benefits of music</div>
-        </div>
-      </div>
+        <% end %>
     </div>
-
   </div>
+
   <br />
   <div class="row clearfix">
     <div class = "bottom_bar">

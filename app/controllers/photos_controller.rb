@@ -14,7 +14,7 @@ class PhotosController < ApplicationController
     #or the standard create:
     #@photo = Photo.create(photo_params)
     if photo.save
-      redirect_to post_photo_path(:post_id, @photo)
+      redirect_to post_path(post)
     else
       render 'new'
     end

@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all
+    @post1 = Post.last(4) #pulls in last four posts to post1
   end
 
   def show
@@ -20,11 +21,11 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = Post.new(order_params)
+    post = Post.new(post_params)
     post.user_id = current_user.id
       #respond_to do |format|
       if post.save
-        redirect_to posts_path
+        redirect_to new_posts_photo_path(post)
       else
         render 'new'
       end
@@ -32,8 +33,8 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    if @post.update_attributes(order_params)
-      redirect_to posts_path
+    if @post.update_attributes(post_params)
+      redirect_to new_post_photo_path(@post)
     else
         render 'edit'
     end
@@ -50,7 +51,7 @@ class PostsController < ApplicationController
     def set_post
       @post = Post.find(params[:id])
     end
-    def order_params
+    def post_params
       params.require(:post).permit(:title, :category,:teaser, :content)
     end
 end

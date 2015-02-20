@@ -12,11 +12,17 @@
   <div class="show_content">
     <%= @post.content %>
   </div>
+    <% @post.photos.each do |p| %>
+    <%= image_tag p.image.url(:large) %>
+    <% end %>
 </div>
 
 <div class="container">
 	<% if current_user != nil && current_user.is_admin == true %>
 	<%= link_to 'Edit', edit_post_path(@post) %>
+  <%= link_to 'Add Photo', new_post_photo_path(@post) %>
 	<% end %>
 	<%= link_to 'Home', posts_path %>
 </div>
+
+
