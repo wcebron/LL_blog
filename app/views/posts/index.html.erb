@@ -9,10 +9,11 @@
       <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden;">
           <!-- Slides Container -->
         <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 600px; height: 400px;">
-            <div><a u="image" href="../posts/1"><img src="../../assets/guitar.jpg"/></a></div> 
-            <div><a u="image" href="../posts/2"><img src="../../assets/brains.jpg"/></a></div>
-            <div><a u="image" href="../posts/3"><img src="../../assets/john_mayer.jpg"/></a></div>
-            <div><a u="image" href="../posts/4"><img src="../../assets/piano.jpg"/></a></div>
+            <% @post1.each do |post| %>
+            <% post.photos.each do |p| %>
+            <div><a u="image" href="../posts/1"><%= image_tag p.image.url %></a></div> 
+            <% end %>
+            <% end %>
         </div>
       </div>
     </div>
@@ -76,6 +77,10 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class = "container">
+
 </div>
 
 <div class = "container">

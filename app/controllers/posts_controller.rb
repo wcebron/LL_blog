@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @post1 = Post.last(4) #pulls in last four posts to post1
+    @photos = Photo.all
   end
 
   def show
