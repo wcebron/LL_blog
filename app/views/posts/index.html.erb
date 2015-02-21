@@ -20,10 +20,10 @@
     <div class="column third">
       <div id="t1"> Popular Topics:
       </div>
-      <% @post1.each do |post|%>
+      <% @post1.each_with_index do |post, index|%>
       <div class="trending" id="t2">
         <div class="left_trending">
-          <div class="numberCircle1">
+          <div class="numberCircle1"> <%= (index+1) %>
           </div>
         </div>
         <div class="right_trending">
