@@ -24,6 +24,12 @@ class PhotosController < ApplicationController
   	@photo = Photo.find(params[:id])
   end
 
+  def destroy
+    photos = Photo.find(params[:id])
+    photo.destroy
+    redirect_to post_path(post)
+  end
+
   private
   def get_post
   	@post = Post.where(id: params[:post_id]).first
