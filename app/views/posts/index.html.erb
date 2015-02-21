@@ -11,7 +11,8 @@
         <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 600px; height: 400px;">
             <% @post1.each do |post| %>
             <% post.photos.each do |p| %>
-            <div><a u="image" href="../posts/1"><%= image_tag p.image.url %></a></div> 
+            <div><a u="image" href="<%=post_path(post)%>"><%= image_tag p.image.url %></a></div> 
+            <!-- Above code cycles through pictures associated with each blog and provides a link to each in slider -->
             <% end %>
             <% end %>
         </div>
@@ -28,8 +29,8 @@
           </div>
         </div>
         <div class="right_trending">
-          <div class="category">
-            <%= post.category %> <br />
+          <div class="category"><a href="<%= post_path(post)%>">
+            <%= post.category %></a> <br />
           </div>
           <div class="title">
             <%= post.title %>

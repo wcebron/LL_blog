@@ -25,7 +25,7 @@ class PhotosController < ApplicationController
   end
 
   def destroy
-    photos = Photo.find(params[:id])
+    photo = Photo.find(params[:id])
     photo.destroy
     redirect_to post_path(post)
   end

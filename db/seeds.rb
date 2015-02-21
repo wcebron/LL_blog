@@ -26,5 +26,6 @@ Post.create(title: 'What is the right piano for beginners?', category: 'Instrume
 
 ')
 
-User.create(email: "will@lessonlodge.com", bio:"amateur coder, professional beast")
+User.create(email: "will@lessonlodge.com", bio:"amateur coder professional beast")
+
 # Post.photos.create(url: 'http;ashaishai') add in an image url for the placeholders
