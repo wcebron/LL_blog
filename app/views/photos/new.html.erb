@@ -1,6 +1,5 @@
-<h1>Photos#new</h1>
-	<p>Find me in app/views/photos/new.html.erb</p>
-	
+<div class="container">
+	<h1>Add a photo</h1>
 	<%= form_for [@post, @photo] do |f| %>
 	
 	  <div class="field">
@@ -17,3 +16,14 @@
 	    <%= f.submit %>
 	  </div>
 	<% end %>
+</div>
+<div class="container">
+  <div class ="nav_links">
+		<%= link_to 'Home', posts_path %>
+	</div>
+	<div class ="log_in">
+		<% if current_user != nil %>
+			Signed in as: <%= current_user.email %>
+		<% end %>
+	</div>
+</div>

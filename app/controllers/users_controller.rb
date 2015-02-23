@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
-    redirect_to posts_path
+    if current_user != nil && current_user.is_admin == true
+      @users = User.all
+    else
+      redirect_to posts_path
   end
 
   def new
