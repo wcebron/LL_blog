@@ -9,7 +9,19 @@ class UsersController < ApplicationController
   end
 
    def show
+    if current_user != nil && current_user.is_admin == true
     @user = User.find(params[:id])
+    else
+      redirect_to new_user_path
+    end
+  end
+
+  def edit
+    if current_user != nil && current_user.is_admin == true
+      @user = User.find(params[:id])
+    else
+      redirect_to users_path
+    end
   end
 
   def create
@@ -21,6 +33,21 @@ class UsersController < ApplicationController
     else
       redirect_to new_user_path
     end
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      redirect_to user_path
+    else
+        render 'edit'
+    end
+  end 
+
+  def destroy
+    user = User.find(params[:id])
+    user.destroy
+    redirect_to new_user_path
   end
 
   private

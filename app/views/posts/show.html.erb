@@ -9,20 +9,28 @@
   <div class="show_title">
     <%= @post.title %>
   </div>
-  <div class="show_content">
-    <%= simple_format(@post.content) %>
-  </div>
   <div class="show_photo">
     <% @post.photos.each do |p| %>
     <%= image_tag p.image.url(:large) %>
     <% end %>
   </div>
+  <div class="show_content">
+    <%= simple_format(@post.content) %>
+  </div>
 </div>
 
 <div class="container">
-	<% if current_user != nil && current_user.is_admin == true %>
-	<%= link_to 'Edit', edit_post_path(@post) %>
-  <%= link_to 'Add Photo', new_post_photo_path(@post) %>
-	<% end %>
-	<%= link_to 'Home', posts_path %>
+  <div class ="nav_links">
+  	<% if current_user != nil && current_user.is_admin == true %>
+  	<%= link_to 'Edit Post |', edit_post_path(@post) %>
+    <%= link_to 'Delete Post |', post_path, method: :delete %></td>
+    <%= link_to 'Add Photo |', new_post_photo_path(@post) %>
+  	<% end %>
+  	<%= link_to 'Home', posts_path %>
+  </div>
+  <div class ="log_in">
+    <% if current_user != nil %>
+      Signed in as: <%= current_user.email %>
+    <% end %>
+  </div>
 </div>

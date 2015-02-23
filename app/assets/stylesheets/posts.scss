@@ -174,17 +174,10 @@ $mainfont:'Kreon', serif;
 	text-align: center;
 }
 
-.jssora02l, .jssora02r {
-	position: absolute;
-	cursor: pointer;
-	display: block;
-	background: url('../../assets/a20.png') no-repeat;
-	overflow: hidden;
-}
-
 .show_photo {
-	position: relative;
-	text-align:center;
-	margin: 0 auto;
+	width: 90%;
+	margin: 5px;
+	background-size: cover;
+	overflow: hidden;
 }
 

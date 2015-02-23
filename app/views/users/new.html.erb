@@ -15,7 +15,11 @@
 	<% end %>
 </div>
 
-<div class="container">
-	<%= link_to 'Home', posts_path %>
-</div>
-
+  <div class ="nav_links">
+		<%= link_to 'Home', posts_path %>
+	</div>
+	<div class ="log_in">
+			<% if current_user != nil %>
+			Signed in as: <%= current_user.email %>
+			<% end %>
+	</div>

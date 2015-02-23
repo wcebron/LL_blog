@@ -3,11 +3,24 @@
 </div>
 
 <div class = "container">
-	<%= @user.email %><br />
+	<div class= "user_display">
 	<%= @user.bio %><br />
 	<%= image_tag @user.avatar.url(:medium) %><br />
-	<%= image_tag @user.avatar.url(:thumb) %><br />
+	<%= @user.email %><br />
 	<br />
+	</div>
 
-	<%= link_to 'Return to new user', new_user_path %>
+	<div class ="nav_links">
+		<% if current_user != nil && current_user.is_admin == true %>
+			<%= link_to 'Edit User |', edit_user_path(@user) %>
+		  <%= link_to 'Delete User |', user_path, method: :delete %></td>
+  	<% end %>
+		<%= link_to 'Home', posts_path %>
+	</div>
+	<div class ="log_in">
+		<% if current_user != nil %>
+			Signed in as: <%= current_user.email %>
+		<% end %>
+	</div>
+
 </div>
