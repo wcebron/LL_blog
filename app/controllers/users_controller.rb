@@ -4,6 +4,7 @@ class UsersController < ApplicationController
       @users = User.all
     else
       redirect_to posts_path
+    end
   end
 
   def new
